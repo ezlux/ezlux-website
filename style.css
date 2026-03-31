@@ -6,15 +6,29 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8fafc;
+    background-color: #ffffff;
     color: #0f172a;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
     text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
+body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('logo.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 55%;
+    opacity: 0.06;
+    filter: blur(2px);
+    z-index: 0;
+}
 /* CONTAINER */
 .container {
     max-width: 700px;
